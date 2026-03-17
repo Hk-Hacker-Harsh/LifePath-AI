@@ -1,0 +1,83 @@
+.wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--fm);
+  font-size: 12px;
+  min-width: 720px;
+}
+
+.th {
+  padding: 11px 16px;
+  text-align: left;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  font-size: 9px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.tr:hover { background: rgba(255,255,255,0.025); }
+.alt { background: rgba(255,255,255,0.015); }
+
+.td {
+  padding: 12px 16px;
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.tdYear {
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 13px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.barCell {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.barTrack {
+  width: 48px;
+  height: 4px;
+  background: var(--surface2);
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.barNum {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.tdEvent {
+  max-width: 200px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.tdMilestone {
+  max-width: 180px;
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 500;
+}

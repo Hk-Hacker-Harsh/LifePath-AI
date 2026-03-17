@@ -1,0 +1,83 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--sc-dim);
+  opacity: 0;
+  transition: opacity 0.25s;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.card:hover { border-color: var(--sc); transform: translateY(-2px); }
+.card:hover::before { opacity: 0.5; }
+.active { border-color: var(--sc) !important; transform: translateY(-4px) !important; box-shadow: 0 14px 44px var(--sc-glow) !important; }
+.active::before { opacity: 1 !important; }
+
+.header {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 10px; position: relative; z-index: 1;
+}
+.icon { font-size: 20px; flex-shrink: 0; }
+.label { font-family: var(--fd); font-size: 14px; font-weight: 800; color: var(--sc); line-height: 1.2; }
+.years { font-family: var(--fm); font-size: 9px; color: var(--muted); letter-spacing: 1.5px; margin-top: 1px; }
+
+.demandBadge {
+  font-family: var(--fm); font-size: 9px; letter-spacing: 1px;
+  padding: 2px 7px; border-radius: 4px; border: 1px solid;
+  background: transparent; opacity: 0.85; white-space: nowrap;
+}
+.activeBadge {
+  font-family: var(--fm); font-size: 8px; letter-spacing: 1.5px;
+  color: var(--sc); background: var(--sc-dim);
+  padding: 3px 8px; border-radius: 4px; border: 1px solid var(--sc);
+  white-space: nowrap;
+}
+
+/* DB-powered insight line */
+.dbInsight {
+  font-family: var(--fm); font-size: 11px; color: var(--text-secondary);
+  line-height: 1.7; margin-bottom: 14px;
+  position: relative; z-index: 1;
+  padding: 8px 10px; background: rgba(255,255,255,0.03);
+  border-radius: 7px; border-left: 2px solid var(--sc);
+}
+
+/* 3-col stats grid */
+.statsGrid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px; position: relative; z-index: 1; margin-bottom: 10px;
+}
+.statBox {
+  background: var(--surface2); border-radius: 8px; padding: 8px 10px;
+}
+.statLabel {
+  font-family: var(--fm); font-size: 8px; color: var(--muted);
+  letter-spacing: 0.5px; margin-bottom: 3px; text-transform: uppercase;
+}
+.statValue { font-family: var(--fd); font-size: 13px; font-weight: 800; }
+
+/* Delta row */
+.deltaRow {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 10px; background: var(--surface2); border-radius: 7px;
+  margin-bottom: 10px; position: relative; z-index: 1;
+}
+.deltaLabel { font-family: var(--fm); font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.deltaVal { font-family: var(--fd); font-size: 13px; font-weight: 800; }
+
+/* Sparkline */
+.sparkline { position: relative; z-index: 1; }
+.sparklineLegend {
+  display: flex; gap: 14px; justify-content: flex-end;
+  font-family: var(--fm); font-size: 8px; margin-top: 3px; opacity: 0.7;
+}
