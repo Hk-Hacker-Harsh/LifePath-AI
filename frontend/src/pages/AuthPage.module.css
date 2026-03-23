@@ -1,0 +1,121 @@
+.page {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); position: relative; overflow: hidden; padding: 24px;
+}
+
+.gridBg {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(rgba(232,200,74,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,200,74,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.glow {
+  position: fixed; top: -20%; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 400px; pointer-events: none; z-index: 0;
+  background: radial-gradient(ellipse, rgba(232,200,74,0.08) 0%, transparent 70%);
+}
+
+.card {
+  position: relative; z-index: 1;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: 40px 36px;
+  width: 100%; max-width: 420px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+}
+
+.orbWrap {
+  display: flex; justify-content: center; margin-bottom: 20px;
+}
+
+.brand {
+  font-family: var(--fd); font-size: 28px; font-weight: 900;
+  text-align: center; color: var(--text); margin-bottom: 6px;
+}
+.gold { color: var(--gold); }
+
+.tagline {
+  font-family: var(--fm); font-size: 11px; color: var(--muted);
+  text-align: center; margin-bottom: 28px; letter-spacing: 0.5px;
+}
+
+.modeTabs {
+  display: flex; background: var(--surface2); border-radius: 10px;
+  padding: 4px; gap: 4px; margin-bottom: 24px;
+}
+.modeTab {
+  flex: 1; padding: 9px; border: none; border-radius: 7px;
+  background: transparent; color: var(--muted);
+  font-family: var(--fm); font-size: 12px; cursor: pointer;
+  transition: all 0.15s;
+}
+.modeTabActive {
+  background: var(--gold-dim); color: var(--gold); font-weight: 700;
+  border: 1px solid rgba(232,200,74,0.3);
+}
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label {
+  font-family: var(--fm); font-size: 10px; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 1.5px;
+}
+.input {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 14px;
+  color: var(--text); font-family: var(--fm); font-size: 13px;
+  outline: none; transition: border-color 0.15s;
+}
+.input:focus { border-color: rgba(232,200,74,0.4); }
+
+.error {
+  background: rgba(245,115,106,0.1); border: 1px solid rgba(245,115,106,0.3);
+  border-radius: 8px; padding: 10px 14px;
+  font-family: var(--fm); font-size: 11px; color: var(--risk);
+}
+
+.submitBtn {
+  padding: 13px; border-radius: 10px; border: none; cursor: pointer;
+  background: var(--gold); color: #0a0a0a;
+  font-family: var(--fd); font-size: 14px; font-weight: 800;
+  transition: all 0.15s; margin-top: 4px;
+}
+.submitBtn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px var(--gold-glow); }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.loading { opacity: 0.7; }
+
+.switchRow {
+  margin-top: 20px; text-align: center;
+  font-family: var(--fm); font-size: 11px; color: var(--muted);
+}
+.switchLink {
+  background: none; border: none; color: var(--gold);
+  font-family: var(--fm); font-size: 11px; cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Verify screen */
+.verifyBlock { text-align: center; padding: 8px 0; }
+.verifyIcon  { font-size: 48px; margin-bottom: 16px; }
+.verifyTitle {
+  font-family: var(--fd); font-size: 20px; font-weight: 800;
+  color: var(--text); margin-bottom: 12px;
+}
+.verifyText {
+  font-family: var(--fm); font-size: 12px; color: var(--text-secondary);
+  line-height: 1.7; margin-bottom: 24px;
+}
+.switchBtn {
+  background: none; border: 1px solid var(--border); border-radius: 8px;
+  padding: 10px 20px; color: var(--muted); font-family: var(--fm); font-size: 12px;
+  cursor: pointer; transition: all 0.15s;
+}
+.switchBtn:hover { border-color: var(--border-hover); color: var(--text-secondary); }
+
+.info {
+  background: rgba(61,232,160,0.1); border: 1px solid rgba(61,232,160,0.3);
+  border-radius: 8px; padding: 10px 14px;
+  font-family: var(--fm); font-size: 11px; color: var(--opt);
+}
