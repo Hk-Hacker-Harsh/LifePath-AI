@@ -2,7 +2,6 @@
 
 An intelligent life-planning companion that helps users simulate and analyze major life decisions using AI-powered analytics and feeling tracking.
 
-### Prototype: http://172.188.112.47/
 
 ## 📋 Table of Contents
 
